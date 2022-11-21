@@ -5,6 +5,9 @@ const Post = ({ user, content, likedBy, likeAmount }) => {
   const onPressHeart = () => {
     setIsLiked(!isLiked);
   };
+  const onPressImage = () => {
+    setIsLiked(true);
+  };
   const [isBookMarked, setIsBookMarked] = useState(false);
   const onPressBook = () => {
     setIsBookMarked(!isBookMarked);
@@ -23,7 +26,11 @@ const Post = ({ user, content, likedBy, likeAmount }) => {
       </div>
 
       <div className="conteudo">
-        <img data-test="post-image" src={`assets/img/${content}.svg`} />
+        <img
+          onClick={onPressImage}
+          data-test="post-image"
+          src={`assets/img/${content}.svg`}
+        />
       </div>
 
       <div className="fundo">
@@ -31,6 +38,7 @@ const Post = ({ user, content, likedBy, likeAmount }) => {
           <div>
             {isLiked ? (
               <ion-icon
+                class="vermelho"
                 name="heart"
                 data-test="like-post"
                 onClick={onPressHeart}
