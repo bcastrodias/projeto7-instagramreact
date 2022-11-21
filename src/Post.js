@@ -37,12 +37,14 @@ const Post = ({ user, content, likedBy, likeAmount }) => {
         <div className="acoes">
           <div>
             {isLiked ? (
-              <ion-icon
-                class="vermelho"
-                name="heart"
-                data-test="like-post"
-                onClick={onPressHeart}
-              />
+              <div className="vermelho">
+                <ion-icon
+                  class="vermelho"
+                  name="heart"
+                  data-test="like-post"
+                  onClick={onPressHeart}
+                />
+              </div>
             ) : (
               <ion-icon
                 name="heart-outline"

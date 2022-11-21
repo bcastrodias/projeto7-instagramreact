@@ -2,8 +2,9 @@
   box-sizing: border-box;
 }
 
-ion-icon .vermelho {
+.vermelho {
   color: red;
+  display: inline-block;
 }
 
 body {
