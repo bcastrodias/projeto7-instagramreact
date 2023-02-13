@@ -29,6 +29,7 @@ const Post = ({ user, content, likedBy, likeAmount }) => {
         <img
           onClick={onPressImage}
           data-test="post-image"
+          data-test="like-post"
           src={`assets/img/${content}.svg`}
         />
       </div>
