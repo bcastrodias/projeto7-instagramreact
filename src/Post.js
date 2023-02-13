@@ -6,7 +6,7 @@ const Post = ({ user, content, likedBy, likeAmount }) => {
     setIsLiked(!isLiked);
   };
   const onPressImage = () => {
-    setIsLiked(true);
+    setIsLiked(!isLiked);
   };
   const [isBookMarked, setIsBookMarked] = useState(false);
   const onPressBook = () => {
